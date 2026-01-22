@@ -4,5 +4,29 @@ jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
       - name: my-step
         run: echo "Hello World!"
+        
+      - name: Build
+        run: |
+          echo "Starting build process..."
+          # Add your build commands here
+          # Example: npm run build, mvn compile, dotnet build, etc.
+          echo "Build completed successfully!"
+          
+      - name: Test
+        run: |
+          echo "Running tests..."
+          # Add your test commands here
+          # Example: npm test, pytest, go test, etc.
+          echo "Tests passed!"
+          
+      - name: Deploy
+        run: |
+          echo "Starting deployment..."
+          # Add your deployment commands here
+          # Example: deploy to server, cloud, container registry, etc.
+          echo "Deployment completed!"
